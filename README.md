@@ -1,44 +1,83 @@
 # Automatización de Datos en Odoo con Python 📊
 
-En esta práctica se desarrolla un script en Python que implementa un proceso ETL (Extracción, Transformación y Carga) para importar un archivo CSV 
-con datos de centros educativos a una base de datos PostgreSQL utilizada por Odoo. El entorno de ejecución se encuentra desplegado mediante Docker.
+---
 
-El script automatiza la lectura del CSV, la creación de la tabla de destino `import_centros` y la inserción de los datos, asegurando que la transacción 
-se confirme únicamente si el proceso se completa sin errores.
+## Autor 👤
+JESÚS MACÍAS OJUELOS  DAM2
+
+---
+
+## Descripción del proyecto
+En esta práctica se desarrolla un script en Python que implementa un proceso ETL (Extracción, Transformación y Carga) para importar un archivo CSV con datos de centros educativos a una base de datos PostgreSQL utilizada por Odoo. Todo el entorno se encuentra desplegado mediante Docker, garantizando una ejecución controlada y reproducible.
+
+El script se encarga de leer el archivo CSV, crear automáticamente la tabla de destino si no existe e insertar los datos en la base de datos, asegurando que la transacción solo se confirme cuando el proceso se completa sin errores.
+
+---
 
 ## Tecnologías utilizadas ⚙️
-- Python 3.10+
-- Docker Desktop
-- PostgreSQL
-- Odoo
-- pgAdmin 4
-- Librerías: pandas y psycopg2-binary
+- Python 3.10 o superior  
+- Docker Desktop  
+- PostgreSQL  
+- Odoo  
+- pgAdmin 4  
+- Librerías Python:
+  - pandas  
+  - psycopg2-binary  
 
-## Contenido del repositorio 📁
-- `importar.py`: script ETL en Python  
-- `centros_educativos.csv`: archivo de datos de entrada  
-- `README.md`: documentación del proyecto  
-- `captura.png`: evidencia de ejecución y verificación  
+---
 
-## Ejecución del proyecto ▶️
-1. Comprobar que los contenedores de Odoo y PostgreSQL están activos y que PostgreSQL expone el puerto 5432.
-2. Instalar las dependencias necesarias:
-```bash
+## Estructura del repositorio 📁
+El repositorio contiene los siguientes archivos:
+
+├── importar.py
+├── centros_educativos.csv
+├── README.md
+└── captura.png
+
+
+---
+
+## Preparación del entorno 🧪
+Antes de ejecutar el script, se debe disponer de Python 3.10 o superior y tener Docker Desktop instalado y en funcionamiento.
+
+Para instalar las dependencias necesarias, ejecutar el siguiente comando:
+
 pip install pandas psycopg2-binary
-Ejecutar el script desde la carpeta del proyecto:
+
+---
+## Configuración y ejecución ▶️
+Verificar que los contenedores de Odoo y PostgreSQL están activos.
+
+Comprobar que PostgreSQL expone el puerto 5432 al sistema anfitrión.
+
+Desde la carpeta raíz del proyecto, ejecutar el script:
 
 python importar.py
-Al finalizar, el script muestra un mensaje indicando que la conexión y la carga de datos se han realizado correctamente.
+Si la ejecución es correcta, el script mostrará un mensaje indicando que la conexión con la base de datos se ha establecido correctamente y que los datos han sido cargados con éxito.
 
-Verificación en pgAdmin 🗄️
-Para comprobar que los datos se han importado correctamente, se accede a pgAdmin y se ejecuta la siguiente consulta SQL sobre la base de datos configurada:
+---
+
+## Verificación de resultados en pgAdmin 🗄️
+Para comprobar que el proceso ETL se ha realizado correctamente:
+
+Abrir pgAdmin y conectarse al servidor PostgreSQL.
+
+Acceder a la base de datos configurada en el script.
+
+Ejecutar la siguiente consulta SQL:
 
 SELECT * FROM import_centros;
-La consulta muestra los registros cargados desde el archivo CSV.
+La consulta mostrará los registros importados desde el archivo CSV, confirmando que los datos han sido insertados correctamente.
 
-Evidencia 📸
-La captura incluida en el repositorio muestra la ejecución correcta del script desde la terminal de VS Code, la consulta SELECT en pgAdmin con los
-datos cargados y la barra de tareas del sistema con la hora visible para verificar la autoría.
+---
 
-Autor 👤
-Práctica realizada como actividad evaluable de automatización de datos en Odoo con Python.
+## Evidencia 📸
+El repositorio incluye una captura de pantalla (captura.png) en la que se puede observar:
+
+La ejecución correcta del script desde la terminal de VS Code.
+
+El resultado de la consulta SELECT en pgAdmin mostrando los datos cargados.
+
+La barra de tareas del sistema con la hora visible, como verificación de la autoría del trabajo.
+
+
