@@ -8,6 +8,7 @@ JESÚS MACÍAS OJUELOS  DAM2
 ---
 
 ## Descripción del proyecto
+
 En esta práctica se desarrolla un script en Python que implementa un proceso ETL (Extracción, Transformación y Carga) para importar un archivo CSV con datos de centros educativos a una base de datos PostgreSQL utilizada por Odoo. Todo el entorno se encuentra desplegado mediante Docker, garantizando una ejecución controlada y reproducible.
 
 El script se encarga de leer el archivo CSV, crear automáticamente la tabla de destino si no existe e insertar los datos en la base de datos, asegurando que la transacción solo se confirme cuando el proceso se completa sin errores.
@@ -15,6 +16,7 @@ El script se encarga de leer el archivo CSV, crear automáticamente la tabla de 
 ---
 
 ## Tecnologías utilizadas ⚙️
+
 - Python 3.10 o superior  
 - Docker Desktop  
 - PostgreSQL  
@@ -27,6 +29,7 @@ El script se encarga de leer el archivo CSV, crear automáticamente la tabla de 
 ---
 
 ## Estructura del repositorio 📁
+
 El repositorio contiene los siguientes archivos:
 
 ├── importar.py
@@ -41,6 +44,7 @@ El repositorio contiene los siguientes archivos:
 ---
 
 ## Preparación del entorno 🧪
+
 Antes de ejecutar el script, se debe disponer de Python 3.10 o superior y tener Docker Desktop instalado y en funcionamiento.
 
 Para instalar las dependencias necesarias, ejecutar el siguiente comando:
@@ -49,6 +53,7 @@ pip install pandas psycopg2-binary
 
 ---
 ## Configuración y ejecución ▶️
+
 Verificar que los contenedores de Odoo y PostgreSQL están activos.
 
 Comprobar que PostgreSQL expone el puerto 5432 al sistema anfitrión.
@@ -56,11 +61,13 @@ Comprobar que PostgreSQL expone el puerto 5432 al sistema anfitrión.
 Desde la carpeta raíz del proyecto, ejecutar el script:
 
 python importar.py
+
 Si la ejecución es correcta, el script mostrará un mensaje indicando que la conexión con la base de datos se ha establecido correctamente y que los datos han sido cargados con éxito.
 
 ---
 
 ## Verificación de resultados en pgAdmin 🗄️
+
 Para comprobar que el proceso ETL se ha realizado correctamente:
 
 Abrir pgAdmin y conectarse al servidor PostgreSQL.
@@ -70,11 +77,13 @@ Acceder a la base de datos configurada en el script.
 Ejecutar la siguiente consulta SQL:
 
 SELECT * FROM import_centros;
+
 La consulta mostrará los registros importados desde el archivo CSV, confirmando que los datos han sido insertados correctamente.
 
 ---
 
 ## Conclusión
+
 Con esta práctica se ha conseguido automatizar la carga de datos externos en Odoo mediante un proceso ETL desarrollado en Python, 
 integrando correctamente Docker, PostgreSQL y herramientas de administración como pgAdmin. El proyecto demuestra la correcta conexión 
 entre servicios, el tratamiento de archivos CSV y la persistencia segura de los datos en la base de datos, cumpliendo con los requisitos 
