@@ -81,6 +81,10 @@ SELECT * FROM import_centros;
 La consulta mostrará los registros importados desde el archivo CSV, confirmando que los datos han sido insertados correctamente.
 
 ---
+## Captura de pantalla realizada
+<img width="1919" height="924" alt="Captura de pantalla 2026-02-06 131944" src="https://github.com/user-attachments/assets/f8b17b2d-c0b4-4451-9ea1-3ab2883cffcf" />
+
+---
 
 ## Conclusión
 
