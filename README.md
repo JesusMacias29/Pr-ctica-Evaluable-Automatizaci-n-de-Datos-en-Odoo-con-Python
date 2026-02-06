@@ -30,8 +30,11 @@ El script se encarga de leer el archivo CSV, crear automáticamente la tabla de 
 El repositorio contiene los siguientes archivos:
 
 ├── importar.py
+
 ├── centros_educativos.csv
+
 ├── README.md
+
 └── captura.png
 
 
