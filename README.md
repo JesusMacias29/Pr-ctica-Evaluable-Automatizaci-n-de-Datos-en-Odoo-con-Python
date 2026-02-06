@@ -74,17 +74,6 @@ La consulta mostrará los registros importados desde el archivo CSV, confirmando
 
 ---
 
-## Evidencia 📸
-El repositorio incluye una captura de pantalla (captura.png) en la que se puede observar:
-
-La ejecución correcta del script desde la terminal de VS Code.
-
-El resultado de la consulta SELECT en pgAdmin mostrando los datos cargados.
-
-La barra de tareas del sistema con la hora visible, como verificación de la autoría del trabajo.
-
----
-
 ## Conclusión
 Con esta práctica se ha conseguido automatizar la carga de datos externos en Odoo mediante un proceso ETL desarrollado en Python, 
 integrando correctamente Docker, PostgreSQL y herramientas de administración como pgAdmin. El proyecto demuestra la correcta conexión 
